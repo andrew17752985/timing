@@ -12,25 +12,25 @@
     <h1>Task Manager</h1>
     <div class="input-container">
       <label for="planned-hours">Запланований час (години):</label>
-      <input type="number" id="planned-hours" min="0">
+      <input class="input" type="number" id="planned-hours" min="1">
   </div>
   <button class="button" onclick="setPlannedTime()">Встановити запланований час</button>
     <div class="input-section">
         <div class="input-container">
             <label for="task">Завдання:</label>
-            <input type="text" id="task" placeholder="Введіть завдання">
+            <input class="input" type="text" id="task" placeholder="Введіть завдання">
         </div>
         <div class="input-container">
             <label for="comment">Коментар:</label>
-            <input type="text" id="comment" placeholder="Додайте коментар">
+            <input class="input" type="text" id="comment" placeholder="Додайте коментар">
         </div>
         <div class="input-container">
             <label for="start-time">Початок:</label>
-            <input  type="time" id="start-time" value="00:00">
+            <input class="input" type="time" id="start-time" value="00:00">
         </div>
         <div class="input-container">
             <label for="end-time">Завершення:</label>
-            <input type="time" id="end-time" value="00:00">
+            <input class="input" type="time" id="end-time" value="00:00">
         </div>
     </div>
     <button class="button" onclick="addTask()">Додати завдання</button>
