@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>Task Manager</h1>
+    <div class="input-container">
+      <label for="planned-hours">Запланований час (години):</label>
+      <input type="number" id="planned-hours" min="0">
+  </div>
+  <button class="button" onclick="setPlannedTime()">Встановити запланований час</button>
+    <div class="input-section">
+        <div class="input-container">
+            <label for="task">Завдання:</label>
+            <input type="text" id="task" placeholder="Введіть завдання">
+        </div>
+        <div class="input-container">
+            <label for="comment">Коментар:</label>
+            <input type="text" id="comment" placeholder="Додайте коментар">
+        </div>
+        <div class="input-container">
+            <label for="start-time">Початок:</label>
+            <input  type="time" id="start-time" value="00:00">
+        </div>
+        <div class="input-container">
+            <label for="end-time">Завершення:</label>
+            <input type="time" id="end-time" value="00:00">
+        </div>
+    </div>
+    <button class="button" onclick="addTask()">Додати завдання</button>
+    <button class="button" onclick="downloadTable()">Завантажити таблицю (txt)</button>
+    <button class="button" onclick="generateExcel()">Завантажити Excel</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Завдання</th>
+                <th>Коментар</th>
+                <th>Початок</th>
+                <th>Завершення</th>
+                <th>Час виконання</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+            <!-- Заповнюємо дані з додаткового коду -->
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4" class="total-time">Загальний час виконання:</td>
+                <td id="total-time">0 год 0 хв</td>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+<script src="./script.js"></script>
+</body>
+</html>

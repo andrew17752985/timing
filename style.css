@@ -1,0 +1,170 @@
+    /* Загальні стилі */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+  }
+
+  .container {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #fff;
+      box-sizing: border-box;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+  }
+
+  h1 {
+      text-align: center;
+      margin-bottom: 20px;
+  }
+
+  .input-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 20px;
+  }
+
+  .input-container {
+      flex-basis: 48%;
+      margin-bottom: 10px;
+  }
+
+  .input-container label,
+  .input-container input {
+      display: block;
+      margin-bottom: 5px;
+  }
+
+  button {
+          padding: 10px 20px;
+          background-color: #4CAF50;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+          font-size: 16px;
+      }
+
+      button:hover {
+          background-color: #45a049;
+      }
+
+  .button {
+    margin-bottom: 15px;
+  }
+  /* Стилізація інпутів */
+  input[type="text"],
+  input[type="time"] {
+      max-width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+  }
+
+  input[type="time"] {
+      width: 120px;
+  }
+
+  table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+  }
+
+  th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+  }
+
+  th {
+      background-color: #f2f2f2;
+  }
+
+  tfoot td {
+      font-weight: bold;
+  }
+
+  @media (max-width: 600px) {
+          .input-container {
+              flex-basis: 100%;
+          }
+
+          thead {
+            display: none;
+          }
+
+          /* Змінюємо вигляд таблиці для мобільних пристроїв */
+          table {
+              font-size: 14px;
+          }
+
+          th, td {
+              display: block;
+              width: 100%;
+              padding: 10px;
+              text-align: center;
+          }
+
+          th {
+              background-color: #f2f2f2;
+              font-weight: bold;
+          }
+
+          tr:nth-child(even) {
+              background-color: #f2f2f2;
+          }
+
+          /* Змінюємо стиль кнопки для мобільних пристроїв */
+          button {
+              width: 100%;
+              padding: 12px;
+              font-size: 16px;
+          }
+
+          /* Приховуємо колонку з часом виконання на малих екранах */
+          td:nth-child(5), th:nth-child(5) {
+              display: none;
+          }
+
+          /* Виносимо дані про завдання та час виконання в окремі рядки */
+          td:nth-child(1):before {
+              content: "Завдання: ";
+          }
+
+          td:nth-child(2):before {
+              content: "Коментар: ";
+          }
+
+          td:nth-child(3):before {
+              content: "Початок: ";
+          }
+
+          td:nth-child(4):before {
+              content: "Завершення: ";
+          }
+      }
+
+      /* Анімація для додавання рядків */
+      @keyframes slideIn {
+          0% {
+              opacity: 0;
+              transform: translateY(-20px);
+          }
+          100% {
+              opacity: 1;
+              transform: translateY(0);
+          }
+      }
+
+      .new-row {
+          animation: slideIn 0.5s ease;
+      }
